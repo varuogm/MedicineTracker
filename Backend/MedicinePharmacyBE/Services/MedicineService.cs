@@ -18,6 +18,15 @@ public class MedicineService : IMedicineService
 
     public async Task<IEnumerable<MedicineResponseDto>> GetAllAsync(string? search = null)
     {
+        try
+        {
+
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
         _logger.LogInformation("Service: getting all medicines, search='{Search}'", search);
 
         var medicines = await _medicineRepository.GetAllAsync();
